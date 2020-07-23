@@ -1,0 +1,18 @@
+{
+  "name": "test-test",
+  "version": "0.0.1",
+  "author": "jloutsch",
+  "summary": "test modue",
+  "license": "Apache-2.0",
+  "source": "github",
+  "project_page": "github",
+  "issues_url": "github",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "data_provider": null
+}
+
