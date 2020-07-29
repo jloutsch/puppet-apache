@@ -1,0 +1,17 @@
+steps:
+  - task: apache::ctl
+    target: jloutsch2c.mylabserver.com
+    description: "shuts down apache service"
+    parameters:
+      command: graceful-stop
+
+  - command: "cp /etc/httpd/logs/access_log /tmp/apache_access"
+    target: jloutsch2c.mylabserver.com
+    description: "Create snapshot of apache log files"
+
+  - task: package
+    target: jloutsch2c.mylabserver.com
+    description: "Uninstall apache"
+    parameters: 
+      action: uninstall
+      name: httpd
